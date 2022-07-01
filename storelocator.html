@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store locator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+         *{
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        #showelements{
+            margin-left:15px;
+            display:inline-block;
+            width:90%;
+           
+            border: none;
+            text-align: end;
+   
+        }
+        #address{
+            display:flex;
+            margin:-10px 0px -10px 0px;
+            
+        }
+        #address img{
+            margin-left: -2px;
+            margin-top:-35px;
+        }
+       #areaselector{
+         text-align: center;
+       }
+       #result{
+           margin:auto;
+           height: 560px;
+           width:80%;
+          
+           margin-top: 40px;
+           display:flex;
+
+       }
+       select{
+           padding:10px 20px 10px 20px;
+           font-size: 20px;
+           width:300px;
+           color:darkslategrey
+       }
+       .searchnow{
+           padding:10px 20px 10px 20px;
+           font-size: 20px;
+           color:white;
+           background-color: black;
+       }
+       #showresult{
+           width:33%;
+           margin :left;
+           height:60%;
+           
+       }
+       #showresult1{
+          
+           margin:auto;
+           margin-top: -20px;
+           width:90%;
+          
+           height:70%;
+           
+           overflow: hidden;
+       }
+      iframe{
+          height:100%;
+           width:750px;
+           border:none;
+           padding-bottom: 60px;
+       }
+       #constant{
+           text-align: center;
+           margin-top: -1px;
+           font-size: 20px;
+           font-weight: 600;
+           background-color: #D8D8D8;
+           padding:10px 25px 10px 25px 
+           
+       }
+       #nav img{
+           margin-bottom: -5px;
+       }
+       #nav{
+           display:flex;
+           justify-content: space-around;
+       }
+      #findastore{
+            margin-top: 6%;
+           font-size:64px;
+           text-align: center;
+       }
+       .footerdiv{
+           box-sizing: content-box;
+       }
+       #footer{
+           margin-top: 25px;
+       }
+    </style>
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+   
+    <div id="navbar" style="margin-top:0px">
+        <div class="logo">
+            <a href="index.html"><img src="https://logo-base.com/logo/oppo_logo_black_png_white.png" alt=""/></a>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="main-menu">
+                    <li><a href="#">Smartphones</a>
+                        <div class="main-sub">
+                            <div class="main-col1">
+                                <ul class="series">
+                                    <li class="F"><a href=""  >Find X Series</a></li>
+                                    <li><a href="">Reno Series</a> </li>
+                                    <li><a href="">F Series</a> </li>
+                                    <li><a href="">A Series</a> </li>
+                                    <li><a href="">K Series</a> </li>
+                                </ul>
+                                <ul class="compare">
+                                    <li><a href="">Compare</a></li>
+                                    <li><a href="">View All Phones</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="main-col2">
+                                <ul class="series">
+                                    <div>
+                                        <li>
+                                            <div class="find">
+                                                <a href="FindXpage.html">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/navigation/find-series/find-x2/Find%20X2-navigation-Black-v2.png" alt="">
+                                                    <p>OPPO FIND X2</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/in/mkt/homepage/navigaion/v2/Find-X2-738-984.png.thumb.webp" alt="">
+                                                    <p>All Find X Series Phones ></p>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    
+                                    <div>
+                                        <li>
+                                            <div class="find">
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno7_pro/listpage/Reno7_Pro_listpage-blue_2.png.thumb.webp" alt="">
+                                                    <p>OPPO Reno7 Pro 5G</p>
+                                                    <p class="hot">New</p>
+                                                </a> 
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno7/listpage/Reno7_listpage-blue_2.png.thumb.webp" alt="">
+                                                    <p>OPPO Reno7 5G</p>
+                                                    <p class="hot">New</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno6pro-5g-oversea/navigation/Homepage-header2-427-x-600.png.thumb.webp" alt="">
+                                                    <p>OPPO Reno6 Pro 5G</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno6-5g-oversea/listpage/Phone-list-product-list-Aurora-427-x-600.png.thumb.webp" alt="">
+                                                    <p>OPPO Reno6 5G</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno5-pro-5g-chaka/navigation/Reno5-pro-chaka-navigation-blue-v2.png.thumb.webp" alt="">
+                                                    <p>OPPO Reno5 Pro 5G</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno7_pro/seriespage/Reno7pro.jpg.thumb.webp" alt="">
+                                                    <p>All Reno Series Phones ></p>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li>
+                                            <div class="find">
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/elsa/f19-pro-plus/navigation/F19-navigation-gray-v2.png.thumb.webp" alt="">
+                                                    <p>OPPO F19 Pro+ 5G</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/darwin/f19-pro/navigation/Reno5-F-navigation-gray-v2.png.thumb.webp" alt="">
+                                                    <p>OPPO F19 Pro</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/f19s/listpage/F19s-listpage-gold.png.thumb.webp" alt="">
+                                                    <p>OPPO F19s</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/beta-f19/navigation/F19-navigation-blue-v2.png.thumb.webp" alt="">
+                                                    <p>OPPO F19</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/pk/mkt/homepage/top/f17-pro/F17-pro-navigation-blue-v2.png" alt="">
+                                                    <p>OPPO F17 Pro</p>
+                                                </a>   
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/f17-a73/navigation/F17-navigation-orange-v2.png.thumb.webp" alt="">
+                                                    <p>OPPO F17</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/navigation/f15/F15-navigation-white-v2.png.thumb.webp" alt="">
+                                                    <p>OPPO F15</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/navigation/f15/F15-navigation-white-v2.png.thumb.webp" alt="">
+                                                    <p>OPPO F11</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/in/mkt/homepage/navigaion/v2/F19-PRO.jpg.thumb.webp" alt="">
+                                                    <p>All F Series Phones ></p>
+                                                </a>
+                                            </div>
+                                        </li>  
+                                    </div> 
+                                    <div>                          
+                                        <li>
+                                            <div class="find">
+ 
+                                            </div>  
+                                        </li> 
+                                    </div>                               
+                                </ul>
+                            </div>
+                        </div>
+    
+                    </li>
+                    <li><a href="#">IoT Products</a>
+                        <div class="main-sub">
+                            <div class="main-col1">
+                                <ul class="series">
+                                    <li><a href="">Audio</a></li>
+                                    <li><a href="">Wearables</a> </li>
+                                    <li><a href="">Accessories</a> </li>
+                                </ul>
+                                <ul class="compare">
+                                    <li><a href="">View IoT Products</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="main-col2">
+                                <ul class="series">
+                                    <div>
+                                        <li>
+                                            <div class="find1">
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/enco-air2/navigation/enco-air2-navigation-blue.png.thumb.webp" alt="">
+                                                    <p>OPPO Enco Air2</p>
+                                                    <p class="hot">New</p>
+                                                </a> 
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/enco-m32-en/navigation/M32_black_inavigation.png.thumb.webp" alt="">
+                                                    <p>OPPO Echo M32</p>
+                                                    <p class="hot">New</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/enco-buds/navigation/Enco-buds-navigation-blue-v2.png.thumb.webp" alt="">
+                                                    <p>OPPO Echo Buds</p>
+                                                    <p class="hot">New</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/navigation/accessories/headset/enco-free/Enco%20Free-navigation-White-v2.png" alt="">
+                                                    <p>OPPO Echo Free</p>
+                                                </a>
+                                            </div>
+
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li>
+                                            <div class="find1">
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/in/mkt/homepage/navigaion/v2/OPPO-Enco-M31.png.thumb.webp" alt="">
+                                                    <p>OPPO Enco M31</p>
+                                                </a> 
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/navigation/accessories/headset/w11/W11-navigation-White-v2.png" alt="">
+                                                    <p>OPPO Echo W11</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/navigation/accessories/headset/w31/W31-navigation-white-v2.png.thumb.webp" alt="">
+                                                    <p>OPPO Echo W31</p>
+                                                </a>
+                                                <a href="">
+                                                    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/navigation/accessories/headset/w51/W51-navigation-White-v2.png.thumb.webp" alt="">
+                                                    <p>OPPO Echo W51</p>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <!-- <img src="https://image.oppo.com/content/dam/oppo/in/mkt/homepage/navigaion/air2_navi.jpg.thumb.webp" alt="">
+                                    <p>View Audio</p> -->
+                                </ul>
+                            </div>
+                            <!-- <div class="main-col3">
+                                <ul class="series">
+                                    <div>
+                                        <a href="">
+                                            <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/navigation/accessories/headset/w51/W51-navigation-White-v2.png.thumb.webp" alt="">
+                                            <p>OPPO Echo W51</p>
+                                        </a>
+                                    </div>
+                                </ul>
+                            </div> -->
+                        </div>
+                    </li>
+                    <li><a href="store.html">Store <span class="hot">Hot</span></a></li>
+                    <li><a href="#">About OPPO</a>
+                        <div class="main-sub" style="height: 210px;">
+                            <ul class="series1">
+                                <li><a href="">Our Story</a></li>
+                                <li><a href="">Discover</a> </li>
+                                <li><a href="">News</a> </li>
+                                <li><a href="">Campaign   <i class="fa-solid fa-angle-right"></i></a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">ColorOS</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="storelocator.html">Store Locator</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="cart">
+            <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/flat-web-browser/100/search-512.png" alt=""/></a>
+            <a href="cart.html"><img src="https://berceo.com/wp-content/uploads/2022/03/bag.png" alt=""/></a>
+            <a href="signUpPage.html"><img src="https://e7.pngegg.com/pngimages/781/687/png-clipart-refilmery-computer-icons-avatar-user-profile-avatar-heroes-rim.png" alt=""/></a>
+        </div>
+    </div>
+        <!-- <div class="contain">
+        <div>
+            <span>OPPO  Find  X2</span>
+            <span>Series</span>
+        </div>
+        <div>
+            UNCOVER  THE  ULTIMATE
+        </div>
+        <video id="video1" width="770" height="882" autoplay> 
+            <source src="https://assorted.downloads.oppo.com/static/assets/products/find-x2/images/home/kv/pc-5f6478345e920caf1fd19447c4915cd5.mp4" type="video/mp4" />
+        </video>
+    </div> -->
+    <div class="sidebar">
+        <a href="https://play.google.com/store/apps/details?id=com.heytap.store"><img src="https://opsg-img-cdn-gl.heytapimg.com/epb/202110/25/oBVfIuEfrXMKK6k7.svg" alt=""><div>Download App</div></a>
+        <a href="#"><img src="https://opsg-img-cdn-gl.heytapimg.com/epb/202110/25/9qVnQIR71eDz8Hij.svg" alt=""><div>Sign In</div></a>
+        <a href="https://chat-support-in.oppo.com/chat/h5/v2/index.html?sysnum=a4220a22f11648ceaa5f66cddc2cc010&channelid=2"><img src="https://opsg-img-cdn-gl.heytapimg.com/epb/202110/25/7QWTez0YCF5WYO34.svg" alt=""> <div>Live Chat</div></a>
+    </div>  
+    <h1 id="findastore">Find a Store</h1>
+   <div id="areaselector">
+    <select name="state" id="state">
+        <option value="" >Select Province</option>
+        <option value="Andhra Pradesh">Andhra Pradesh</option>
+        <option value="Assam">Assam</option>
+        <option value="Bihar">Bihar</option>
+        <option value="Chandigarh">Chandigarh</option>
+        <option value="Chattisgarh">Chattisgarh</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Haryana">Haryana</option>
+        <option value="Jharkhand">Jharkhand</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Kerala">Kerala</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="North Tamilnadu">North Tamilnadu</option>
+        <option value="Odisha">Odisha</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="South Tamilnadu">South Tamilnadu</option>
+        <option value="Telengana">Telengana</option>
+        <option value="UP East">UP East</option>
+        <option value="UP West">UP West</option>
+        <option value="West Bengal">West Bengal</option>
+
+    </select>
+    <select name="city" id="city">
+        <option value="">Select City</option>
+    </select>
+    <select name="city" id="area">
+        <option value="">All areas</option>
+       
+    </select>
+    <button class="searchnow">Search Now</button>
+   </div>
+   <div id="result">
+    <div id="showresult">
+        <p id="constant">Result 0 found</p>
+        <div id="showresult1">
+            <h3 id="firsttext"></h3>
+            <h3 id="secondtext"></h3>
+            <div id="address"></div>
+            <p id="mobile"></p>
+            <p id="time"></p>
+            <div id="nav"><a href="" id="viewnav"></a> <a href="" id="viewnav1"></a></div>
+          
+        </div>
+       
+    </div>
+    <div id="map"><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?t=m&amp;hl=en-GB&amp;gl=US&amp;mapclient=embed&amp;ie=UTF8&amp;ll=35.432002,-78.795919&amp;spn=0.04336,0.084543&amp;z=14&amp;iwloc=lyrftr:m,1091553228966483181,,&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?t=m&amp;hl=en-GB&amp;gl=US&amp;mapclient=embed&amp;ie=UTF8&amp;ll=35.432002,-78.795919&amp;spn=0.04336,0.084543&amp;z=14&amp;iwloc=lyrftr:m,1091553228966483181,,&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+    </div>
+</div>
+<div id="footer">
+    <div id="d1">
+        <div class="footerdiv">
+            <h3>Smartphones</h3>
+          <a href="dummy.html"><p>OPPO Reno7 Pro 5G</p></a>
+          <a href="dummy.html"><p>OPPO Reno7 5G</p></a>
+          <a href="dummy.html"><p>OPPO Reno6 Pro 5G</p></a>
+          <a href="dummy.html"><p>OPPO Reno6 5G</p></a>
+          <a href="dummy.html"><p>OPPO F19 Pro+ 5G</p></a>
+          <a href="dummy.html"><p>OPPO F19 Pro</p></a>
+          <a href="dummy.html"><p>OPPO F19s</p></a>
+          <a href="dummy.html"><p>OPPO F19</p></a>
+          <a href="dummy.html"><p>OPPO A96</p></a>
+          <a href="dummy.html"><p>OPPO A76</p></a>
+          <a href="dummy.html"><p>OPPO A55</p></a>
+          <a href="dummy.html"><p>OPPO A16e</p></a>
+          <a href="dummy.html"><p>OPPO A16k</p></a>
+          <a href="dummy.html"><p>OPPO K10</p></a>
+          <a href="dummy.html" ><p>See All Smartphones</p></a>
+       
+        </div>
+        <div class="footerdiv">
+            <h3>IoT Products</h3>
+            <a href="dummy.html"><p>OPPO Enco Air2</p></a>
+            <a href="dummy.html"><p>OPPO Watch Free</p></a>
+            <a href="dummy.html"><p>OPPO Enco M32</p></a>
+            <a href="dummy.html"><p>OPPO Enco Buds</p></a>
+            <a href="dummy.html"><p>OPPO Band Style</p></a>
+            <a href="dummy.html"><p>OPPO Enco X</p></a>
+            <a href="dummy.html"><p>OPPO Watch</p></a>
+            <a href="dummy.html"><p>OPPO Enco W51</p></a>
+            <a href="dummy.html"><p>OPPO Enco W11</p></a>
+            <a href="dummy.html"><p>OPPO Enco Free</p></a>
+            <a href="dummy.html"><p>OPPO Enco W31</p></a>
+            <a href="dummy.html"><p>OPPO Enco M31</p></a>
+        </div>
+        <div class="footerdiv">
+            <h3>Special Offers</h3>
+            <a href="dummy.html"><p>Education Discount</p></a>
+            <a href="dummy.html"><p>Strike a Bargain</p></a>
+            
+        </div>
+        <div class="footerdiv">
+            <h3>Support</h3>
+            <a href="dummy.html"><p>Contact Us</p></a>
+            <a href="dummy.html"><p>Service Center</p></a>
+            <a href="dummy.html"><p>Warranty Check</p></a>
+            <a href="dummy.html"><p>OPPO Update</p></a>
+            <a href="dummy.html"><p>Terms and Conditions</p></a>
+            <a href="dummy.html"><p>E-waste Management</p></a>
+            <a href="dummy.html"><p>Security Response</p></a>
+            <a href="dummy.html"><p>Center</p></a>
+            <a href="dummy.html"><p>Warranty Policy</p></a>
+            <a href="dummy.html"><p>Investor</p></a>
+        </div>
+        <div class="footerdiv">
+            <h3>About OPPO</h3>
+            <a href="dummy.html"><p>Our Story</p></a>
+            <a href="dummy.html"><p>Technology</p></a>
+            <a href="dummy.html"><p>Newsroom</p></a>
+            <a href="dummy.html"><p>Campaign</p></a>
+            <a href="dummy.html"><p>Career</p></a>
+        
+        </div>
+        <div class="footerdiv">
+            <h3>OPPO Community</h3>
+            <a href="dummy.html"><p>OPPO Community</p></a>
+        </div>
+    </div>
+    <div id="d2">
+        <div id="d21">
+            <div><h4 onclick="hideshowfun()">Email</h4></div>
+            <div><h4 onclick="hidefun()">Hotline</h4></div>
+        </div>
+        <div id="hidenshowemail">
+            <p>support.in@oppo.com</p>
+        </div>
+         
+         <div id="social">
+            <div>
+                
+                <a href="https://www.facebook.com/OPPOCareIN/?brand_redir=1826516244270990" target="_blank"><img src="https://support.oppo.com/content/dam/oppo/common/support/contact-us/Facebook-solid.svg" alt=""></a>
+                <a href="https://twitter.com/OPPOCareIN" target="_blank"><img src="https://support.oppo.com/content/dam/oppo/common/support/contact-us/Twitter-solid.svg" alt=""></a>
+                <a href="https://www.instagram.com/oppoindia/" target="_blank"><img src="https://support.oppo.com/content/dam/oppo/common/support/contact-us/Instagram.svg" alt=""></a>
+                <a href="https://www.youtube.com/channel/UCMoJmRNcc-n8WdesyjQ6i_g" target="_blank"><img src="https://support.oppo.com/content/dam/oppo/common/support/contact-us/Youtube-solid.svg" alt=""></a>
+            </div>
+        </div>
+        <div id="lastdiv">
+            <p>Privacy</p>
+            <p>Terms of Use</p>
+            <p>India(English)</p>
+        </div>
+        <p>Copyright © 2004-2022 OPPO. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var showpage=[]
+    var data={Vizag:["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+Golaghat:["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Guwahati Club":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Guwahati City":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Ganesh Ganeshghuri":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Shillong":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"Patna":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Chandigarh":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Raipur":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"North-Delhi":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"West-Delhi":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Surat":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Jamnagar":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Morbi":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"Veraval":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Bhavnagar":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Ahmedabad":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"Viramgham":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Botad":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Gurgaon":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Panipat":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Panchkula":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"Rewari":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Ballabhgarh":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Kurukshetra":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"Bahadurgarh":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Ambala":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Sonipat":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Ranchi":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Bangalore":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"Mandya":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Myosre":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Devangere":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"Gulbarga":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Calicut":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Tirur":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Kottakkal":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Perinthalmanna":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"Valanchery":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Palakkad":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Alathur":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"Thrissur":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Ernakulam":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Aluva":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Thodupuzha":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Attingal":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"Trivandrum":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Paravoor":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Palarivattom":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"Indore":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Bhopal":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Thane":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Navi Mumbai":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Chandrapur":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"Aurangabad":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Pune":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Margao":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"Solapur":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Narayangaon":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Mumbai":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Nagpur":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Nashik":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"Chennai":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Jajpur road":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Cuttack":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"Amritsar":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Hoshiarpur":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Mohali":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Ludhiana":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Patiala":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"Jaipur":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Coimbatore":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Erode":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"Madurai":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Trichy":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Telangana":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Lucknow":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Bahraich":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"Barabnki":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Kanpur":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Mathura":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"Greater Noida":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Ghaziabad":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Noida":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"Loni":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+"Howrah":["[OPPO Exclusive Showroom] DESIRE IMPEX","GS Road, Police bazar opposite to Desire New building ESF mall Pin code-793001","9863088843","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.7949961969643!2d91.87151801445461!3d25.57848632240347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37507e8b62f101ad%3A0x24103fe5583ada25!2sLaxmi%20Plaza%2C%20Shillong!5e0!3m2!1sen!2sin!4v1648586252207!5m2!1sen!2sin","https://www.google.com/maps/dir//Laxmi+Plaza,+Shillong,+GS+Rd,+%C3%8Fewduh,+Mawkhar,+Shillong,+Meghalaya+793002/@25.5784863,91.871518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37507e8b62f101ad:0x24103fe5583ada25!2m2!1d91.8737038!2d25.5784735"],
+"West Medinipur":["[Oppo Exclusive Showroom] Amba Enterprises","SHOP NO 9 UJJAIN COMPLEX PATNA-80001","7280001836","Opening time: 10.30AM to 9.00PM","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2198.8020625704703!2d85.13328341252794!3d25.609974387529554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58413d0fc5cf%3A0xc617c094b3617180!2s%5BOPPO%20Exclusive%20Showroom%5D%20M.K%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648586554426!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+M.K+ENTERPRISES,+Shop+No.09+Patna+Ujjain,+Mourya+Complex,+near+Titan,+Patna,+Bihar+800001/@25.6099744,85.1332834,17.71z/data=!4m8!4m7!1m0!1m5!1m1!1s0x39ed58413d0fc5cf:0xc617c094b3617180!2m2!1d85.135205!2d25.6103244"],
+"Barasat":["OPPO STORE Sco 1026B","SCO- 1026 SECTOR 22 B MOBILE MARKET","7814593352","Opening time: 10:00-20:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.375445217537!2d76.77530201457499!3d30.73595379252965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedc979101173%3A0x9bd9556a8f2c822!2sMobile%20market!5e0!3m2!1sen!2sin!4v1648586953578!5m2!1sen!2sin","https://www.google.com/maps/dir//Mobile+market,+SCO+No.1010-11,+Cabin+No.33,+22B,+Sector+22,+Chandigarh,+160022/@30.7359538,76.775302,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390fedc979101173:0x9bd9556a8f2c822!2m2!1d76.7774907!2d30.7359492"],
+"Durgapur":["[OPPO Exclusive Showroom] VBV Enterprises","47-11-9, Ground Floor, Beside Sai Ram Parlor, Opp. Diamond Park, Dwarakanagar, Vizag- 530016","8142699959","Opening time: 10:00-22:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.391082690705!2d83.30114691488112!3d17.72620273787646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394324ae308f3b%3A0x2652cc2980b93a53!2s%5BOPPO%20Exclusive%20Showroom%5D%20VBV%20ENTERPRISES!5e0!3m2!1sen!2sin!4v1648567671427!5m2!1sen!2sin","https://www.google.com/maps/dir//%5BOPPO+Exclusive+Showroom%5D+VBV+ENTERPRISES,+D.NO+47-11-9,+Vamsee+Complex+Ground+Floor,+Diamond+Park+Rd,+Dwaraka+Nagar,+Visakhapatnam,+Andhra+Pradesh+530016/@17.7262057,83.3011447,17.01z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a394324ae308f3b:0x2652cc2980b93a53!2m2!1d83.3033562!2d17.7262072"],
+"Bankura-Subash road":["[OPPO Exclusive Showroom] KB MOBILE & ACCESSORIES","oppo exclusive showroom Golaghat Assam Near lions club old ubi building opposite tennis club complex 785621","8876731033","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.34738690402!2d93.97538971503707!3d26.541105783288998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37468f1da0d5ecd1%3A0x1487d753a01138c1!2sOppo%20exclusive%20showroom!5e0!3m2!1sen!2sin!4v1648584021225!5m2!1sen!2sin","https://www.google.com/maps/dir//Oppo+exclusive+showroom,+near+lions+club,+Golaghat,+Assam+785621/@26.5411058,93.9753897,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x37468f1da0d5ecd1:0x1487d753a01138c1!2m2!1d93.9775804!2d26.5411141"],
+"Birbhum-Bolpur":["[OPPO Exclusive Showroom] GUWAHATI","Guwahati club, New Tech Digitals (oppo exclusive showroom) Besides Federal Bank Mother Teresa road 781003","9706670579","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57291.32949795583!2d91.7245909601359!3d26.173634563432028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5a4b50000001%3A0x8aa0c4a12c019694!2sNew%20Tech%20Digitals!5e0!3m2!1sen!2sin!4v1648584584550!5m2!1sen!2sin","https://www.google.com/maps/dir//New+Tech+Digitals,+Near+Athgaon+Flyover+,+A.T+Road+,+Bharalumukh,+Guwahati,+Assam+781009/@26.1736346,91.724591,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5a4b50000001:0x8aa0c4a12c019694!2m2!1d91.7331931!2d26.1743003"],
+"Bangaon(Motiganj)":[" [OPPO Exclusive Showroom] CITY CENTRE","City Center Mall,3rd Follor, Near International Hospital, Christan Basti, G.S Road,Guwahati","8638755425","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.2693474493376!2d91.7747184144669!3d26.155356098579112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5913929bb2bf%3A0x11319c2f7b32016a!2sOYO%20Premium%20GS%20Road%20Near%20International%20Hospital!5e0!3m2!1sen!2sin!4v1648585052777!5m2!1sen!2sin","https://www.google.com/maps/dir//OYO+Premium+GS+Road+Near+International+Hospital,+GS+Tower,+GMC+Hostel+Rd,+Christian+Basti,+Guwahati,+Assam+781005/@26.1553561,91.7747184,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x375a5913929bb2bf:0x11319c2f7b32016a!2m2!1d91.7769857!2d26.1554335"],
+"South City Mall":[" [OPPO Exclusive Showroom] GANESHGURI","Electrocity Ganeshguri, G.S Road, Guwahati-781005","7002810183","Opening time: 10:00-21:00","https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.4532553001272!2d91.78376086056232!3d26.149364151795183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a591655a97793%3A0xe61f478e391c6988!2sOPPO%20Exclusive%20Showroom%2CGaneshguri%20(ELECTROCITY)!5e0!3m2!1sen!2sin!4v1648585842228!5m2!1sen!2sin","https://www.google.com/maps/dir//OPPO+Exclusive+Showroom,Ganeshguri+(ELECTROCITY),+Electrocity,+GS+Rd,+Ganeshguri,+Guwahati,+Assam+781005/@26.1493642,91.7837609,17z/data=!3m1!5s0x13d2ca6b5d4c01df:0x530d2f0a66086dad!4m8!4m7!1m0!1m5!1m1!1s0x375a591655a97793:0xe61f478e391c6988!2m2!1d91.7859496!2d26.1493642"],
+
+}
+   var city={"Madhya Pradesh":["Bhopal","Indore"],
+   "Andhra Pradesh":["Vizag"],
+   "Assam":["Golaghat","Guwahati Club","Guwahati City", "Ganesh Ganeshghuri","Shillong"],
+   "Bihar":["Patna"],
+   "Chandigarh":["Chandigarh"],
+   "Chattisgarh":["Raipur"],
+   "Delhi":["North-Delhi", "West-Delhi"],
+   "Gujarat":["Surat", "Jamnagar","Morbi","Veraval", "Bhavnagar", "Ahmedabad", "Viramgham", "Botad"],
+   "Haryana":["Gurgaon","Panipat", "Punchkula", "Rewari", "Ballabhgarh", "Kurukshetra", "Bahadurgarh","Ambala", "Sonipat"],
+   "Jharkhand":["Ranchi"],
+   "Karnataka":["Bangalore","Mandya","Myosre","Devangre","Gulbarga"],
+   "Kerala":["Calicut","Tirur","Kottakkal","Perinthalmanna","Valanchery","Palakkad","Alathur","Thrissur","Ernakulam","Aluva","Thodupuzha","Attingal", "Trivandrum","Paravoor","Palarivattom"],
+   "Madhya Pradesh":["Indore","Bhopal"],
+   "Maharashtra":["Thane","Navi Mumbai","Chandrapur","Aurangabad","Pune","Margao", "Solapur","Narayangaon", "Mumbai", "Nagpur", "Nashik"],
+   "North Tamilnadu":["Chennai"],
+   "Odisha":["Jajpur road", "Cuttack"],
+   "Punjab":["Amritsar", "Hoshiarpur","Mohali", "Ludhiana","Patiala"],
+   "Rajasthan":["Jaipur"],
+   "South Tamilnadu":["Coimbatore","Erode","Madurai","Trichy"],
+   "Telangana":["Telangana"],
+   "UP East":["Lucknow","Bahraich","Barabnki","Kanpur"],
+   "UP West":["Mathura", "Greater Noida","Ghaziabad","Noida", "Loni"],
+   "West Bengal":["Howrah", "West Medinipur", "Barasat", "Durgapur","Bankura-Subash road","Birbhum-Bolpur","Bangaon(Motiganj)","South City Mall"]
+
+
+   }
+  
+  document.querySelector("#state").addEventListener("change", myfun)
+  document.querySelector("#city").addEventListener("change", myfun1)
+ function myfun(){
+    document.querySelector("#city").innerHTML="<option>"+"select city"+"</option>"
+    var state=  document.querySelector("#state").value
+    for(x in city){
+     if(state==x){
+      city[x].map(function(el){
+
+        var option=document.createElement("option")
+       option.innerText=el
+       document.querySelector("#city").append(option)
+      })
+       
+     }
+ }
+ }
+ function myfun1(){
+     document.querySelector("#area").innerHTML="<option>"+"area"+"</option>"
+     var city1=document.querySelector("#city").value 
+     var option=document.createElement("option")
+     option.innerText=city1;
+     document.querySelector("#area").append(option)
+ }
+document.querySelector(".searchnow").addEventListener("click", searchnow)
+function searchnow(){
+    var c=0;
+    
+    var area=document.querySelector("#area").value 
+    for(y in data){
+        if(y==area){
+               
+              var  obj={
+                    heading:data[y][0],
+                    address:data[y][1],
+                    mobile:data[y][2],
+                    time:data[y][3],
+                    store:data[y][5]
+              }
+            showpage.push(obj)
+            localStorage.setItem("shops", JSON.stringify(showpage))
+            c++;
+            document.querySelector("#constant").innerText=`Result ${c} found`
+            
+            document.querySelector("#map").innerHTML=""
+           var h3= document.querySelector("#firsttext")
+            h3.innerText=`${c}. ${data[y][0]}`
+          
+            var h3i=document.querySelector("#secondtext")
+            h3i.style.backgroundColor="#046A38";
+            h3i.style.padding="10px";
+            h3i.style.color="white";
+            h3i.innerText="Oppo Brand Store (Sales & Services)"
+            var address= document.querySelector("#address")
+            address.innerHTML=`<img src="https://www.oppo.com/content/dam/oppo/common/mkt/offline-experience/location-outline.svg" alt=""> <p> ${data[y][1]}</p>`
+            var mobile= document.querySelector("#mobile")
+            mobile.innerHTML=`<img src="https://www.oppo.com/content/dam/oppo/common/mkt/offline-experience/call line-outline.svg"> ${data[y][2]}`
+            var time= document.querySelector("#time")
+            time.innerHTML=`<img src="https://www.oppo.com/content/dam/oppo/common/mkt/offline-experience/Access time-outline.svg"> ${data[y][3]}`
+            var but = document.querySelector("#viewnav")
+           
+            
+            but.href=data[y][5]
+            
+            but.innerHTML= `<img  src="https://www.oppo.com/content/dam/oppo/common/mkt/offline-experience/Route.svg" alt=""><span>View Store map</span>`
+           
+            but.style.color="green"
+            var but1 = document.querySelector("#viewnav1")
+            but1.href="shops.html"
+            but1.innerHTML=`<img  src="https://www.oppo.com/content/dam/oppo/common/mkt/offline-experience/Store-outline.svg" alt=""><span>View Store details</span>`
+            but1.style.color="green"
+            
+            document.querySelector("#showresult1").style.backgroundColor="#F6F6F6"
+            
+            var mp=document.createElement("iframe")
+            mp.src=data[y][4]
+            document.querySelector("#map").append(mp)
+           if(document.querySelector("#showelements")==undefined){
+            var button=document.createElement("button")
+            button.setAttribute("id","showelements")
+            button.innerHTML=`  <img src="https://www.oppo.com/content/dam/oppo/common/mkt/offline-experience/allowDown.svg" alt="">`
+           
+           document.querySelector("#showresult").append(button)
+           }
+           document.querySelector("#showelements").addEventListener("click", showelementsfun)
+        function showelementsfun(){
+           var change= document.querySelector("#showresult")
+           var whatheight=change.style.height;
+           var imagerotate=document.querySelector("#showelements>img")
+            if(whatheight=="60%"){
+         change.style.height="100%";
+         imagerotate.style.transform="rotate(180deg)"
+            }
+            else{
+                change.style.height="60%";
+         imagerotate.style.transform="rotate(0deg)"
+            }
+            }
+           
+        }
+        
+    }
+}
+
+
+</script>
